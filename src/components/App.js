@@ -16,7 +16,7 @@ export class App extends Component {
 
     Helper = async (e) =>{
         if(e.key === "Enter"){
-            const response=await axios.get(`http://www.omdbapi.com/?apikey=${process.env.REACT_APP_API_KEY}=${this.state.value}`)
+            const response=await axios.get(`https://www.omdbapi.com/?apikey=${process.env.REACT_APP_API_KEY}=${this.state.value}`)
             // console.log(response.data.Search)
             this.setState({
                 value:'',
@@ -26,7 +26,7 @@ export class App extends Component {
     }
 
     Click = async id =>{
-        const response=await axios.get(`http://www.omdbapi.com/?i=${id}&apikey=${process.env.REACT_APP_API_KEY}`)
+        const response=await axios.get(`https://www.omdbapi.com/?i=${id}&apikey=${process.env.REACT_APP_API_KEY}`)
         // console.log(response.data)
         this.setState({
             result:response.data
